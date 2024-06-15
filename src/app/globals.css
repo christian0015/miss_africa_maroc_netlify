@@ -1,0 +1,216 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+}
+/* App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Monoton&family=Tilt+Neon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Neon&display=swap');
+
+body {
+  font-family: "Exo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c5c5c5;
+  color: #202020;
+}
+.App-head{ 
+  display: flex; justify-content: center; 
+  
+}
+.App-header {
+  background-color: #615e5e4d;
+  position: fixed;
+  padding: 20px;
+  width: 80%;
+  border-radius: 50px;
+  top: 20px;z-index: 100000000000000000;
+  backdrop-filter: blur(10px);
+}
+nav {
+  display: flex; justify-content: space-between;
+}
+/* Mobile */
+@media only screen and (max-width: 700px) {
+  nav .logo{
+    display: none;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;line-break:anywhere; 
+  }
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1px;
+  }
+  }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  margin-top: 50px;
+  /* background-image: url('components/assets/ImgCandidates/Img-Candidate\ \(1\).jpg'); */
+  /* background-image: url('components/assets/LogoFestival.jpg'); */
+  /* background-image: url('components/assets/DesingLogoFestival.jpg'); */
+  /* background-position: ; */
+  /* border-image: fill 0 linear-gradient(rgba(66, 66, 66, 0.281) , rgba(1, 7, 39, 0.493),  rgba(39, 36, 12, 0.274)); */
+  /* background-color: #a7f0e6; */
+  background-size: cover;
+  /* background-position: 100% 100px; */
+}
+.hero-section h1 {font-family:"Audiowide", sans-serif; }
+.hero-section h1 {font-family:"Monoton", sans-serif; }
+.hero-section h1 {font-family:"Tilt Neon", sans-serif; }
+.hero-section h1 {font-family:"Poppins", sans-serif; }
+.hero-section h1 {font-family:"Audiowide", sans-serif; }
+
+.candidates-section {
+  padding: 50px 20px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.listCandidat{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.candidates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.candidate-card {
+  position: relative;
+  background-color: #43461d6e;
+  /* background-image: url(components/assets/ImgCandidates/Img-Candidate\ \(1\).jpg); */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  /* padding-bottom: 20px; */
+  margin: 10px;
+  width: 280px;
+  text-align: center;
+}
+
+.candidate-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  .imgCard{
+    width: 100%;
+  }
+}
+.candidate-card .button{
+  width: 50%;
+  border-radius: 100px;
+  padding: 7px;
+  margin: 20px 2px 10px 2px ;
+  background-color: #43461d6e;;
+  color: rgb(198, 38, 219);
+  font-family: monoton ;
+  border: 1px rgb(185, 88, 230) solid;
+  cursor: pointer;
+  font-family: monoton;
+}
+
+.voteButtons{
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  background-color: #111;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  height: 150px;
+  transition: 2s;
+  .voteButton {
+  width: 50%;
+  border-radius: 10px;
+  padding: 7px;
+  margin: 5px;
+  background-color: rgb(92, 21, 74);
+  color: white;
+}
+}
+.button:hover  .voteButtons   {
+  display: block;
+  transition: 2s;
+  animation: smoothing s;
+}
+.show{
+  display: block;
+  transition: 2s;
+  animation: smoothing .6s;}
+
+@keyframes smoothing {
+  0% {bottom: -200px;}
+  0% {bottom: -100px;}
+  100% {bottom: 0;}
+}
+
+
+
+
+.about-section, .contact-section {
+  padding: 50px 20px;
+  background-color: #1b1922;
+  color: #ffffff;
+  text-align: center;display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.contact-section .input { display: flex; flex-wrap: wrap;
+  gap :10px; width: 300px; margin-bottom: 20px;}
+.contact-section input  {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  border-radius: 15px;
+}.contact-section textarea  {
+  width: 250px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 15px;
+
+}.contact-section button  {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid red;
+  border-radius: 50px;
+  background-color: #1b1922;
+  color: #eeeeee;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #d8d8d8;
+}
